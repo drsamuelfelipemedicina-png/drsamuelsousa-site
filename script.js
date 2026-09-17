@@ -30,3 +30,16 @@ if ('IntersectionObserver' in window) {
 } else {
   revealItems.forEach((item) => item.classList.add('visible'));
 }
+
+const copyPixButton = document.querySelector('#copy-pix');
+copyPixButton?.addEventListener('click', async () => {
+  const status = document.querySelector('#pix-status');
+  const keyElement = document.querySelector('#pix-key');
+  const key = keyElement.textContent.replace(/\D/g, '');
+  try {
+    await navigator.clipboard.writeText(key);
+    status.textContent = 'Chave Pix copiada!';
+  } catch {
+    status.textContent = 'Selecione a chave acima e copie para usar no aplicativo do banco.';
+  }
+});

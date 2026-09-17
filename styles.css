@@ -448,3 +448,15 @@ details p { margin: -2px 0 28px 64px; color: var(--muted); }
 .hero-image-frame img, .about-image img { object-position: center top; }
 .gallery-small img { aspect-ratio: 4 / 3; height: auto; object-position: center top; }
 .gallery-large img { object-position: 50% 55%; }
+
+/* Pagamento via Pix */
+.pix-card { margin-top: 28px; padding: 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px; border: 1px solid var(--line); border-radius: 24px; background: var(--white); }
+.pix-details h3 { margin: 0 0 6px; font-family: "Cormorant Garamond", Georgia, serif; font-size: 30px; font-weight: 600; color: var(--navy); }
+.pix-details p { margin: 0 0 5px; color: var(--text); font-size: 13px; }
+.pix-details strong { font-size: clamp(17px, 4.5vw, 23px); color: var(--navy); user-select: all; overflow-wrap: anywhere; }
+.pix-action { max-width: 100%; }
+#copy-pix { cursor: pointer; }
+#copy-pix:focus-visible { outline: 3px solid var(--navy-soft); outline-offset: 4px; }
+.pix-status { margin: 8px 0 0; color: var(--text); font-size: 13px; max-width: 32ch; }
+.pix-status:empty { display: none; }
+@media (max-width: 640px) { .pix-action { width: 100%; } .pix-card { padding: 24px; } }
