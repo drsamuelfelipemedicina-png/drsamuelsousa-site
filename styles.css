@@ -307,6 +307,7 @@ button { font: inherit; }
   box-shadow: 0 14px 45px rgba(10,27,39,.05);
 }
 .price-card-dark { background: var(--navy); color: white; border-color: transparent; }
+.price-card-special { grid-column: 1 / -1; min-height: 320px; background: rgba(255,255,255,.92); }
 .price-kicker { color: #87969f; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; }
 .price-card-dark .price-kicker { color: #aebdc6; }
 .price-card h3 { margin: 24px 0 14px; font-size: 47px; line-height: .98; }
