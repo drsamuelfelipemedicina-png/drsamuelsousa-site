@@ -1,6 +1,6 @@
 # Site médico — Dr. Samuel Sousa
 
-Site institucional estático com fotos, layout responsivo, consultas online (R$ 270) e domiciliares (R$ 400). Agendamento por e-mail: dr.samuelfelipe.medicina@gmail.com.
+Site institucional estático com fotos, layout responsivo, consultas online (R$ 270), domiciliares (R$ 400) e condição especial de R$ 170 para beneficiários do Bolsa Família mediante comprovação e pacientes atendidos na Clínica Fisionutri em Goianinha/RN. Agendamento por e-mail: dr.samuelfelipe.medicina@gmail.com.
 
 ## Publicação no GitHub Pages
 
