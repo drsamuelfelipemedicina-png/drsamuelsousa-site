@@ -224,6 +224,7 @@ function priceMessage() {
 
 • Consulta online: R$ ${clinicConfig.onlinePrice},00
 • Consulta domiciliar: R$ ${clinicConfig.homePrice},00
+• Condição especial: R$ ${clinicConfig.specialPrice},00 para ${clinicConfig.specialEligibility}
 
 ${pix}
 
@@ -278,6 +279,7 @@ Nome: ${clinicConfig.doctorName}
 Registro: ${clinicConfig.crm}
 Consulta online: R$ ${clinicConfig.onlinePrice},00
 Consulta domiciliar: R$ ${clinicConfig.homePrice},00
+Condição especial: R$ ${clinicConfig.specialPrice},00 para ${clinicConfig.specialEligibility}
 Público: ${clinicConfig.audiences}
 Escopo: ${clinicConfig.scope}
 Site: ${clinicConfig.siteUrl}
