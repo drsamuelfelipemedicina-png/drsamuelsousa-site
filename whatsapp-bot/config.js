@@ -6,7 +6,7 @@ export const clinicConfig = {
   onlinePrice: process.env.ONLINE_PRICE || "270",
   homePrice: process.env.HOME_PRICE || "400",
   specialPrice: process.env.SPECIAL_PRICE || "170",
-  specialEligibility: "beneficiários do Programa Bolsa Família, mediante comprovação, e pacientes atendidos na Clínica Fisionutri, em Goianinha/RN",
+  specialEligibility: "beneficiários do Programa Bolsa Família, mediante comprovação, e pacientes atendidos na Clínica NutriFisio, em Goianinha/RN",
   pixKey: process.env.PIX_KEY || "",
   audiences: "crianças, gestantes, adultos e idosos",
   scope:
