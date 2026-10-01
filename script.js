@@ -13,6 +13,29 @@ document.querySelectorAll('.main-menu a').forEach((link) => {
   });
 });
 
+// Identidade visual: exibe a nova logo com fundo transparente no topo da página.
+const heroCopy = document.querySelector('.hero-copy');
+if (heroCopy && !heroCopy.querySelector('.site-logo-feature')) {
+  const logoWrap = document.createElement('div');
+  logoWrap.className = 'site-logo-feature';
+  logoWrap.style.marginBottom = '24px';
+
+  const logo = document.createElement('img');
+  logo.src = 'assets/logo-dr-samuel.png';
+  logo.alt = 'Dr. Samuel Sousa — Saúde Mental, Neurodesenvolvimento e Pediatria';
+  logo.width = 360;
+  logo.height = 298;
+  logo.decoding = 'async';
+  logo.style.display = 'block';
+  logo.style.width = 'clamp(180px, 22vw, 240px)';
+  logo.style.maxWidth = '72vw';
+  logo.style.height = 'auto';
+  logo.style.objectFit = 'contain';
+
+  logoWrap.appendChild(logo);
+  heroCopy.prepend(logoWrap);
+}
+
 document.querySelector('#year').textContent = new Date().getFullYear();
 
 const revealItems = document.querySelectorAll('.reveal');
