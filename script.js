@@ -13,7 +13,47 @@ document.querySelectorAll('.main-menu a').forEach((link) => {
   });
 });
 
-// Identidade visual: exibe a logo com fundo transparente no final da página.
+// Identidade visual no topo: exibe a nova logo já na primeira tela da página inicial.
+const heroCopy = document.querySelector('.hero-copy');
+if (heroCopy && !heroCopy.querySelector('.hero-brand-logo')) {
+  const heroLogoWrap = document.createElement('div');
+  heroLogoWrap.className = 'hero-brand-logo';
+
+  const heroLogo = document.createElement('img');
+  heroLogo.src = 'assets/logo-dr-samuel.jpg';
+  heroLogo.alt = 'Dr. Samuel Sousa — Saúde Mental, Neurodesenvolvimento e Pediatria — CRM/RN 12780';
+  heroLogo.width = 320;
+  heroLogo.height = 320;
+  heroLogo.fetchPriority = 'high';
+  heroLogo.decoding = 'async';
+
+  heroLogoWrap.appendChild(heroLogo);
+  heroCopy.insertBefore(heroLogoWrap, heroCopy.firstChild);
+
+  const heroLogoStyle = document.createElement('style');
+  heroLogoStyle.textContent = `
+    .hero-brand-logo {
+      width: clamp(190px, 20vw, 250px);
+      margin: 0 0 26px;
+      filter: drop-shadow(0 10px 26px rgba(13, 34, 48, .06));
+    }
+    .hero-brand-logo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 24px;
+    }
+    @media (max-width: 760px) {
+      .hero-brand-logo {
+        width: min(220px, 62vw);
+        margin: 0 auto 24px;
+      }
+    }
+  `;
+  document.head.appendChild(heroLogoStyle);
+}
+
+// Identidade visual: exibe a logo no final da página.
 const footer = document.querySelector('.footer');
 const footerBottom = document.querySelector('.footer-bottom');
 if (footer && footerBottom && !footer.querySelector('.site-logo-feature')) {
@@ -25,10 +65,10 @@ if (footer && footerBottom && !footer.querySelector('.site-logo-feature')) {
   logoWrap.style.padding = '36px 24px 28px';
 
   const logo = document.createElement('img');
-  logo.src = 'assets/logo-dr-samuel.png';
+  logo.src = 'assets/logo-dr-samuel.jpg';
   logo.alt = 'Dr. Samuel Sousa — Saúde Mental, Neurodesenvolvimento e Pediatria';
   logo.width = 360;
-  logo.height = 298;
+  logo.height = 360;
   logo.loading = 'lazy';
   logo.decoding = 'async';
   logo.style.display = 'block';
@@ -36,6 +76,7 @@ if (footer && footerBottom && !footer.querySelector('.site-logo-feature')) {
   logo.style.maxWidth = '82vw';
   logo.style.height = 'auto';
   logo.style.objectFit = 'contain';
+  logo.style.borderRadius = '24px';
 
   logoWrap.appendChild(logo);
   footer.insertBefore(logoWrap, footerBottom);
