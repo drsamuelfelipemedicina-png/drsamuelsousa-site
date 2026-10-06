@@ -20,7 +20,7 @@ if (heroCopy && !heroCopy.querySelector('.hero-brand-logo')) {
   heroLogoWrap.className = 'hero-brand-logo';
 
   const heroLogo = document.createElement('img');
-  heroLogo.src = 'assets/logo-dr-samuel.jpg';
+  heroLogo.src = 'assets/logo-dr-samuel.svg';
   heroLogo.alt = 'Dr. Samuel Sousa — Saúde Mental, Neurodesenvolvimento e Pediatria — CRM/RN 12780';
   heroLogo.width = 320;
   heroLogo.height = 320;
@@ -65,7 +65,7 @@ if (footer && footerBottom && !footer.querySelector('.site-logo-feature')) {
   logoWrap.style.padding = '36px 24px 28px';
 
   const logo = document.createElement('img');
-  logo.src = 'assets/logo-dr-samuel.jpg';
+  logo.src = 'assets/logo-dr-samuel.svg';
   logo.alt = 'Dr. Samuel Sousa — Saúde Mental, Neurodesenvolvimento e Pediatria';
   logo.width = 360;
   logo.height = 360;
